@@ -8,7 +8,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="big_frontend"
+        android:label="大前端"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
