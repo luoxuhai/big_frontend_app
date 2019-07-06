@@ -1,5 +1,5 @@
+import 'dart:convert';
 import 'package:fluro/fluro.dart';
-import 'package:flutter/material.dart';
 import './pages/webview.dart';
 
 class Routes {
@@ -9,7 +9,11 @@ class Routes {
 
   static void configureRoutes(Router router) {
     router.define(docDetilPage,
-        handler: Handler(handlerFunc: (context, params) => DocDetilPage()));
+        handler: Handler(handlerFunc: (context, params) {
+      String url = String.fromCharCodes(base64Decode(params['url']?.first));
+
+      return DocDetilPage(url: url);
+    }));
     Routes.router = router;
   }
 }

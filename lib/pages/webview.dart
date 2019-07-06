@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappbrowser/flutter_inappbrowser.dart';
 
 class DocDetilPage extends StatefulWidget {
+  var url;
+  DocDetilPage({this.url});
+
   @override
   _DocDetilPageState createState() => _DocDetilPageState();
 }
@@ -14,10 +17,10 @@ class _DocDetilPageState extends State<DocDetilPage> {
         title: Text('data'),
       ),
       body: InAppWebView(
-        initialUrl: 'https://www.lodashjs.com/',
+        initialUrl: widget.url,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: () {},
         child: IconButton(
           onPressed: () {},
           icon: Icon(Icons.star),
